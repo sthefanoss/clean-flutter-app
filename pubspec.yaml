@@ -26,7 +26,7 @@ dev_dependencies:
   test:
   mockito:
   faker:
-  image_test_utils:
+  network_image_mock: 2.0.1
     
 flutter:
   uses-material-design: true

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:image_test_utils/image_test_utils.dart';
+import 'package:network_image_mock/network_image_mock.dart';
 import 'package:mockito/mockito.dart';
 
 import 'package:ForDev/ui/helpers/helpers.dart';
@@ -42,7 +42,7 @@ void main() {
     presenter = SurveyResultPresenterSpy();
     initStreams();
     mockStreams();
-    await provideMockedNetworkImages(() async {
+    await mockNetworkImagesFor(() async {
       await tester.pumpWidget(makePage(path: '/survey_result/any_survey_id', page: () => SurveyResultPage(presenter)));
     });
   }
@@ -102,7 +102,7 @@ void main() {
     await loadPage(tester);
 
     surveyResultController.add(FakeSurveyResultFactory.makeViewModel());
-    await provideMockedNetworkImages(() async {
+    await  mockNetworkImagesFor(() async {
       await tester.pump();
     });
 
@@ -145,7 +145,7 @@ void main() {
     await loadPage(tester);
 
     surveyResultController.add(FakeSurveyResultFactory.makeViewModel());
-    await provideMockedNetworkImages(() async {
+    await  mockNetworkImagesFor(() async {
       await tester.pump();
     });
     await tester.tap(find.text('Answer 1'));
@@ -157,7 +157,7 @@ void main() {
     await loadPage(tester);
 
     surveyResultController.add(FakeSurveyResultFactory.makeViewModel());
-    await provideMockedNetworkImages(() async {
+    await  mockNetworkImagesFor(() async {
       await tester.pump();
     });
     await tester.tap(find.text('Answer 0'));
