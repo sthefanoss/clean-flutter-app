@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.0.1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.11.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -13,7 +13,7 @@ dependencies:
   http:
   provider:
   equatable:
-  get: 3.4.2
+  get:
   flutter_secure_storage:
   localstorage:
   carousel_slider:
