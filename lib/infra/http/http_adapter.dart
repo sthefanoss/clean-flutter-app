@@ -20,11 +20,11 @@ class HttpAdapter implements HttpClient {
     Future<Response> futureResponse;
     try {
       if (method == 'post') {
-        futureResponse = client.post(url, headers: defaultHeaders, body: jsonBody);
+        futureResponse = client.post(Uri.parse(url), headers: defaultHeaders, body: jsonBody);
       } else if (method == 'get') {
-        futureResponse = client.get(url, headers: defaultHeaders);
+        futureResponse = client.get(Uri.parse(url), headers: defaultHeaders);
       } else if (method == 'put') {
-        futureResponse = client.put(url, headers: defaultHeaders, body: jsonBody);
+        futureResponse = client.put(Uri.parse(url), headers: defaultHeaders, body: jsonBody);
       }
       if (futureResponse != null) {
         response = await futureResponse.timeout(Duration(seconds: 10));
