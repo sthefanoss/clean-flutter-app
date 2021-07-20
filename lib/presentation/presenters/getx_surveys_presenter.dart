@@ -10,7 +10,7 @@ import '../mixins/mixins.dart';
 
 class GetxSurveysPresenter extends GetxController with SessionManager, LoadingManager, NavigationManager implements SurveysPresenter {
   final LoadSurveys loadSurveys;
-  final _surveys = Rx<List<SurveyViewModel>>();
+  final _surveys = Rx<List<SurveyViewModel>>(null);
 
   Stream<List<SurveyViewModel>> get surveysStream => _surveys.stream;
 

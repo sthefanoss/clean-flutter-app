@@ -13,8 +13,8 @@ class GetxLoginPresenter extends GetxController with LoadingManager, NavigationM
   final Authentication authentication;
   final SaveCurrentAccount saveCurrentAccount;
   
-  final _emailError = Rx<UIError>();
-  final _passwordError = Rx<UIError>();
+  final _emailError = Rx<UIError>(null);
+  final _passwordError = Rx<UIError>(null);
   
   String _email;
   String _password;

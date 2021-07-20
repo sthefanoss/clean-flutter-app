@@ -13,10 +13,10 @@ class GetxSignUpPresenter extends GetxController with LoadingManager, Navigation
   final AddAccount addAccount;
   final SaveCurrentAccount saveCurrentAccount;
   
-  final _emailError = Rx<UIError>();
-  final _nameError = Rx<UIError>();
-  final _passwordError = Rx<UIError>();
-  final _passwordConfirmationError = Rx<UIError>();
+  final _emailError = Rx<UIError>(null);
+  final _nameError = Rx<UIError>(null);
+  final _passwordError = Rx<UIError>(null);
+  final _passwordConfirmationError = Rx<UIError>(null);
   
   String _name;
   String _email;

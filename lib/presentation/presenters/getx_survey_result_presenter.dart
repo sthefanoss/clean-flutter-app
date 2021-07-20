@@ -13,7 +13,7 @@ class GetxSurveyResultPresenter extends GetxController with LoadingManager, Sess
   final LoadSurveyResult loadSurveyResult;
   final SaveSurveyResult saveSurveyResult;
   final String surveyId;
-  final _surveyResult = Rx<SurveyResultViewModel>();
+  final _surveyResult = Rx<SurveyResultViewModel>(null);
 
   Stream<SurveyResultViewModel> get surveyResultStream => _surveyResult.stream;
 
